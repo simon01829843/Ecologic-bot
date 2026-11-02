@@ -28,8 +28,11 @@ async def clasificate(ctx, object):
         await ctx.send("¡Eres un reciclador de papel! Asegúrate de reciclar tus papeles y cartones en los contenedores adecuados.")
     elif object == "vidrio":
         await ctx.send("¡Eres un reciclador de vidrio! Recuerda depositar tus botellas y frascos de vidrio en los contenedores correspondientes.")
+    elif object == "metal":
+        await ctx.send("¡Eres un reciclador de metal! Asegúrate de reciclar tus latas y objetos metálicos en los contenedores adecuados.")
     else:
-        await ctx.send("Lo siento, no puedo clasificar ese objeto. Por favor, ingresa 'plástico', 'papel' o 'vidrio'.")
+        await ctx.send("Lo siento, no puedo clasificar ese objeto. Por favor, ingresa 'plástico', 'papel', 'vidrio' o 'metal'.")
+
 token = os.getenv("DISCORD_TOKEN")
 if not token:
     raise RuntimeError("Falta configurar DISCORD_TOKEN")
